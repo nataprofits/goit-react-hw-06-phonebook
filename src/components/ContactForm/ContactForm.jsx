@@ -1,7 +1,5 @@
 import { useState } from 'react';
-// import { Formik, ErrorMessage } from 'formik';
-import { Button, Input, Label, StyledForm } from './ContactForm.styled';
-
+import { StyledForm, Label, Input, Button } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, addContact } from '../../redux/contactsSlice';
 import { nanoid } from 'nanoid';
@@ -46,7 +44,6 @@ export default function ContactForm() {
   };
 
   return (
-    // <Formik>
     <StyledForm onSubmit={handleSubmit}>
       <Label htmlFor="user_name">
         Name
@@ -59,7 +56,6 @@ export default function ContactForm() {
           value={name}
           onChange={handleChange}
         />
-        {/* <ErrorMessage name="number" component="div" /> */}
       </Label>
 
       <Label htmlFor="user_tel">
@@ -73,10 +69,8 @@ export default function ContactForm() {
           value={number}
           onChange={handleChange}
         />
-        {/* <ErrorMessage name="number" component="div" /> */}
       </Label>
       <Button type="submit">Add contact</Button>
     </StyledForm>
-    // </Formik>
   );
 }
