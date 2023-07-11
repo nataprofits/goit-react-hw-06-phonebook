@@ -9,3 +9,10 @@ export const Input = styled.input`
   border-radius: 5px;
   font-size: 16px;
 `;
+export const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 20px;
+  font-family: sans-serif;
+`;
